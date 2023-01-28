@@ -41,7 +41,7 @@ Overview_NearTX = get_data('Overview_NearTX')
 Overview_Contract_Deployed = get_data('Overview_Contract_Deployed')
 
 
-st.write(""" In this Dashboard term Full-Time Developers are developers who have 10+ days of contributions (Commit code in Guithub) in a month, Part-Time Developer are those who have 2 to 9 days of contributions and finaly One-Time Developers are contribute only once. """)
+st.write(""" In this section we try to compare Near with 2 other ecosystems (Cosmos and Terra). First we review the total 2022 figures then we tried to compare the trends. Cosmos generally had higher figures with the  511 full-time developer which is more than 2times higher than Near figure, while Terra with devestating exprienced this year had a only 7 full-time developers. the Repositeries did not follow the developer number pattern and there is only 796 difference between Near and Cosmos. """)
 
 st.text(" \n")
 st.write(' ## Overview')
@@ -85,6 +85,9 @@ st.text(" \n")
 st.subheader('Near Compared to Terra')
 st.text(" \n")
 
+
+st.write(""" It is obvious that Terra did not exprience good year and with loss of 70% in number of full-time developers in one year needs, while Near exprineced 16% growth with the same figure.  """)
+
 c1, c2 = st.columns(2)
 
 
@@ -105,7 +108,7 @@ with c2:
         'Images/Compare to other dash 2022/Terra_Developers_Data_Table.jpg'))
 
 
-st.write(""" In this Dashboard term Full-Time Developers are developers who have 10+ days of contributions (Commit code in Guithub) in a month, Part-Time Developer are those who have 2 to 9 days of contributions and finaly One-Time Developers are contribute only once. """)
+st.write(""" The flactuation in Terra line graph is continued until 2022, while there was obvious uprising trend in all Near charts despite the 2022 whole market drop. """)
 
 
 c1, c2 = st.columns(2)
@@ -121,3 +124,52 @@ with c2:
         'Images/Compare to other dash 2022/Terra_Monthly_Commits_Type.jpg'))
     st.image(Image.open(
         'Images/Compare to other dash 2022/Terra_Total_Commits_all.jpg'))
+
+
+st.text(" \n")
+st.text(" \n")
+st.text(" \n")
+st.subheader('Near Compared to Cosmos')
+st.text(" \n")
+
+st.write(""" For Cosmos it took almost 6 years to grow to more than 500 developers but Near took this path with only 2 years. Although, the total and full-time developers figures of Cosmos was higher than Near, Near uprising trend had more steep than Cosmos. """)
+
+st.image(Image.open('Images/Compare to other dash 2022/7.Cosmos_Polkadot_Growth.jpg'))
+
+
+c1, c2 = st.columns(2)
+
+
+with c1:
+    st.write(""" #### Near Charts """)
+    st.image(Image.open(
+        'Images/Near Dashboard 2022/Near_Monthly_Active_Dev_Type.jpg'))
+    st.image(Image.open('Images/Near Dashboard 2022/Near_Monthly_Active_Dev_All.jpg'))
+    st.image(Image.open('Images/Near Dashboard 2022/Near_Dev_Data_table.jpg'))
+
+with c2:
+    st.write(""" #### Cosmos Charts """)
+    st.image(Image.open(
+        'Images/Compare to other dash 2022/Cosmos_Monthly_Active_Type.jpg'))
+    st.image(Image.open(
+        'Images/Compare to other dash 2022/Cosmos_Monthly_Active_All.jpg'))
+    st.image(Image.open(
+        'Images/Compare to other dash 2022/Cosmos_Developers_Data_Table.jpg'))
+
+
+st.write(""" In the Commits also Cosmos figures showed the better performance and total Cosmos commits are more than 2 time higher than Near Commits (5,583,259 and 1,783,233, respectively).  """)
+
+
+c1, c2 = st.columns(2)
+
+with c1:
+
+    st.image(Image.open('Images/Near Dashboard 2022/Near_Monthly_Commit_Type.jpg'))
+    st.image(Image.open('Images/Near Dashboard 2022/Near_Monthly_Commit_All.jpg'))
+
+with c2:
+
+    st.image(Image.open(
+        'Images/Compare to other dash 2022/Cosmos_Monthly_Commits_Type.jpg'))
+    st.image(Image.open(
+        'Images/Compare to other dash 2022/Cosmos_Monthly_Commits_All.jpg'))

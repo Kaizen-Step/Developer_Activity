@@ -9,7 +9,7 @@ st.title('Developer Activity')
 
 # Content
 c1, c2, c3 = st.columns(3)
-c3.image(Image.open('Images/near-logo.png'), width=200)
+c3.image(Image.open('Images/near-logo.png'), width=240)
 
 
 with c1:
@@ -73,7 +73,8 @@ st.write("""
 ##### Sources #####   """)
 st.write("""    1.https://https://www.electriccapital.com/  
         2.https://www.bsc.news/post/electric-capital-developer-report  
-        3.
+        3.https://developerreport.com  
+        4.https://www.linkedin.com/in/avichalgarg
       
               """)
 c1, c2 = st.columns(2)
@@ -86,4 +87,4 @@ with c1:
     st.info(
         '**Data:  [Flipside Crypto](https://flipsidecrypto.xyz/)**', icon="🧠")
     st.info(
-        '**Twitter:  [Luwig.1989](https://flipsidecrypto.xyz/)**', icon="🧠")
+        '**Twitter:  [Ludvig.1989](https://flipsidecrypto.xyz/)**', icon="🦜")
