@@ -11,9 +11,9 @@ week_days = ['Monday', 'Tuesday', 'Wednesday',
              'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 # Layout
-st.set_page_config(page_title='Bridge - Near Dashboard',
+st.set_page_config(page_title='Developers On Chain - Developer Activity',
                    page_icon=':bar_chart:', layout='wide')
-st.title('☄️Developers')
+st.title('☄️Developers on Chain')
 
 # Style
 with open('style.css')as f:
@@ -58,7 +58,7 @@ top10_Author = get_data('top10_Author')
 Longest_Period = get_data('Longest_Period')
 
 st.text(" \n")
-st.subheader('Overview')
+st.write(""" ## Overview """)
 
 
 df = Near_Overview
@@ -92,15 +92,11 @@ with c3:
               value=str(df2["Average time to close repo(Day)"].map('{:,.0f}'.format).values[0]))
     st.metric(label='**Max Time To Close Repo [Day]**',
               value=df2["max time to close repo(Day)"].map('{:,.0f}'.format).values[0])
+st.text(" \n")
 
-
-# Number of PR in each State
-fig = px.pie(df4, values="PR_STATE",
-             names="STATE", title='Number of PR in each State', hole=0.5)
-fig.update_layout(legend_title=None, legend_y=0.5)
-fig.update_traces(textinfo='percent+value', textposition='inside')
-st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
-
+st.write(""" ## Repositary in Guithub """)
+st.write(""" As earlier mentioned GitHub is an online software development platform ,and a repository contains all of your project's files and each file's revision history. In this subheader we try to  focuse on Near Repositary that created in Guithub in 2022. We start with Repositary because we rely 
+on open-source repositories the most.   """)
 
 # New Repositary with Cumulative Value
 fig = sp.make_subplots(specs=[[{'secondary_y': True}]])
@@ -115,20 +111,44 @@ fig.update_yaxes(
 fig.update_yaxes(title_text='CUMULATIVE Repo', secondary_y=True)
 st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
-
-# Weekly PR  by Author Association Category
-fig = px.bar(df6.sort_values(["Create Date", "DAILY_PR"], ascending=[
-    True, False]), x="Create Date", y="DAILY_PR", color="AUTHORASSOCIATION", title='Weekly PR  by Author Association Category ')
-fig.update_layout(legend_title=None, xaxis_title=None,
-                  yaxis_title='Weekly PR')
-st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
-
 # Weekly Repo by State Category
 fig = px.bar(df6.sort_values(["Create Date", "COUNT (DISTINCT REPO)"], ascending=[
-    True, False]), x="Create Date", y="COUNT (DISTINCT REPO)", color="STATE", title='Weekly Repo by State Category ')
+    True, False]), x="Create Date", y="COUNT (DISTINCT REPO)", color="STATE", title='Weekly Repositary by State Category ')
 fig.update_layout(legend_title=None, xaxis_title=None,
                   yaxis_title='Weekly Repo')
 st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
+
+# Weekly Repo by Author Association Category
+fig = px.bar(df6.sort_values(["Create Date", "COUNT (DISTINCT REPO)"], ascending=[
+    True, False]), x="Create Date", y="COUNT (DISTINCT REPO)", color="AUTHORASSOCIATION", title='Weekly Repositary by Author Association Category  ')
+fig.update_layout(legend_title=None, xaxis_title=None,
+                  yaxis_title='Weekly Repo')
+st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
+
+#  Top ten repo based on PR
+fig = px.bar(df8, x="REPO", y="PR_AUTHOR", color="REPO",
+             title=' Top ten Repositary based on Pull Request')
+fig.update_layout(legend_title=None, xaxis_title=None,
+                  yaxis_title='Pr Author')
+st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
+st.text(" \n")
+st.text(" \n")
+
+st.write(""" ## NEAR Developers in Guithub """)
+st.write(""" Developers are a leading indicator of value creation. Developers build apps that deliver value to users. Killer apps attract customers, 
+and those customers bring more developers. Because crypto is significantly open 
+source, we have an unprecedented ability to measure developer adoption and 
+fundamental traction in an emerging industry. """)
+
+
+# Weekly Developers
+fig = px.bar(df6.sort_values(["Create Date", "COUNT (DISTINCT AUTHOR)"], ascending=[
+    True, False]), x="Create Date", y="COUNT (DISTINCT AUTHOR)",
+    title='Weekly Developers ')
+fig.update_layout(legend_title=None, xaxis_title=None,
+                  yaxis_title='Weekly Developer')
+st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
+
 
 # Weekly Developer by Author Association Category
 fig = px.bar(df6.sort_values(["Create Date", "COUNT (DISTINCT AUTHOR)"], ascending=[
@@ -137,6 +157,7 @@ fig.update_layout(legend_title=None, xaxis_title=None,
                   yaxis_title='Weekly Developer')
 st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
+
 # Weekly Developers By State  Category
 fig = px.bar(df6.sort_values(["Create Date", "COUNT (DISTINCT AUTHOR)"], ascending=[
     True, False]), x="Create Date", y="COUNT (DISTINCT AUTHOR)", color="STATE", title='Weekly Developers By State  Category ')
@@ -144,12 +165,26 @@ fig.update_layout(legend_title=None, xaxis_title=None,
                   yaxis_title='Weekly Developer')
 st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
-# Weekly Repo by Author Association Category
-fig = px.bar(df6.sort_values(["Create Date", "COUNT (DISTINCT REPO)"], ascending=[
-    True, False]), x="Create Date", y="COUNT (DISTINCT REPO)", color="AUTHORASSOCIATION", title='Weekly Repo by Author Association Category  ')
+#  Top ten Author based on PR
+fig = px.bar(df9, x="AUTHOR", y="PR_AUTHOR", color="AUTHOR",
+             title=' Top ten Author based on PR')
 fig.update_layout(legend_title=None, xaxis_title=None,
-                  yaxis_title='Weekly Repo')
+                  yaxis_title='Pull Request Author')
 st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
+
+st.text(" \n")
+st.text(" \n")
+
+st.write(""" ## Pull Request in Guithub """)
+st.write(""" Pull requests let you tell others about changes you've pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.   """)
+
+# Weekly PR  by Author Association Category
+fig = px.bar(df6.sort_values(["Create Date", "DAILY_PR"], ascending=[
+    True, False]), x="Create Date", y="DAILY_PR", color="AUTHORASSOCIATION", title='Weekly Pull Request by Author Association Category ')
+fig.update_layout(legend_title=None, xaxis_title=None,
+                  yaxis_title='Weekly PR')
+st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
+
 
 # Weekly PR by State Category
 fig = px.bar(df6.sort_values(["Create Date", "DAILY_PR"], ascending=[
@@ -158,32 +193,19 @@ fig.update_layout(legend_title=None, xaxis_title=None,
                   yaxis_title='Weekly PR')
 st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
+# Number of PR in each State
+fig = px.pie(df4, values="PR_STATE",
+             names="STATE", title='Number of Pull Request in each State', hole=0.5)
+fig.update_layout(legend_title=None, legend_y=0.5)
+fig.update_traces(textinfo='percent+value', textposition='inside')
+st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
+
+
 #  10 PR Title with Longest Period to Close(Day)
 fig = px.bar(df7, x="TITLE", y="days left to close PR", color="TITLE",
              title=' 10 PR Title with Longest Period to Close(Day)')
 fig.update_layout(legend_title=None, xaxis_title=None,
-                  yaxis_title='days left to close PR')
-st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
-
-#  Top ten repo based on PR
-fig = px.bar(df8, x="REPO", y="PR_AUTHOR", color="REPO",
-             title=' Top ten repo based on PR')
-fig.update_layout(legend_title=None, xaxis_title=None,
-                  yaxis_title='Pr Author')
-st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
-
-#  Top ten Author based on PR
-fig = px.bar(df9, x="AUTHOR", y="PR_AUTHOR", color="AUTHOR",
-             title=' Top ten Author based on PR')
-fig.update_layout(legend_title=None, xaxis_title=None,
-                  yaxis_title='Pr Author')
-st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
-
-#   10 PR Title with Longest Period to Close(Day)
-fig = px.bar(df10, x="TITLE", y="days left to close PR", color="TITLE",
-             title='  10 PR Title with Longest Period to Close(Day)')
-fig.update_layout(legend_title=None, xaxis_title=None,
-                  yaxis_title='days left to Close PR')
+                  yaxis_title='days left to close Pull Request')
 st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
 

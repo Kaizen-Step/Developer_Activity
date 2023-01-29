@@ -24,7 +24,9 @@ with open('style.css')as f:
 # Refrences
 st.write(""" ## Refrences ## """)
 
-st.write("""  In this dashboard, Electric Capital charts and graphs are used for 'Near in EC 2022'  and "Near VS peer' tab for full EC 2022 developer report review you can visit the website ([Developer Report](https://developerreport.com/)) and also the PDF file that provided. For the other tabs orginal SQL code written that used [Flipside Crypto](https://flipsidecrypto.xyz/) massive data base.
+st.write("""  In this dashboard, Electric Capital charts and graphs are used for 'Near in EC 2022'  and "Near VS peer' tab for full EC 2022 developer report review you can visit the website ([Developer Report](https://developerreport.com/)) and also the PDF file that provided. For the other tabs orginal SQL code written that used [Flipside Crypto](https://flipsidecrypto.xyz/) massive data base.  
+Finally There are many more crypto developers than are accounted for in our report. Some teams are working on closed-source projects or deploy their code on-chain without ever open sourcing their contracts. We also undercount developers in roles such as backporting, testing, or release engineering as 
+their efforts may not result in unique code contributions.S
 """)
 
 

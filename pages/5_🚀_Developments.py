@@ -78,8 +78,9 @@ st.text(" \n")
 st.text(" \n")
 
 
-st.write(""" ### New Contracs Deployed Over time ### """)
+st.write(""" ## New Contracs Deployed Over time ### """)
 
+st.write("""   """)
 
 # Daily New Contract Deployed
 fig = sp.make_subplots(specs=[[{'secondary_y': True}]])
