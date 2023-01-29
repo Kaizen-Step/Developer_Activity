@@ -45,24 +45,45 @@ df2 = Overview_NearTX
 df3 = Overview_Contract_Deployed
 
 
-st.write(""" In this Dashboard term Full-Time Developers are developers who have 10+ days of contributions (Commit code in Guithub) in a month, Part-Time Developer are those who have 2 to 9 days of contributions and finaly One-Time Developers are contribute only once. """)
+st.write(""" According to the CNBC All-America Economic Survey. Overall, the crypto market has lost a little over $2 trillion in 2022 and popular digital coins such as bitcoin have fallen far below their 2021 highs. Despite this huge fall developers activity in makret rise considerably as the new developer ever wrote open-source crypto code rose by 25% in this year.  """)
 
 st.text(" \n")
 st.write(' ## The Highest Number of New Developers')
 
+st.write(""" 2022 saw the highest number of new crypto developers in history with 61,127 and it is almost 3 times as high as 2020 figure (21,615) which exprienced fall after 2018.  """)
 
 st.write(""" """)
 
 st.image(Image.open('Images/2022 VS 2021/5.png'))
 
-st.write(""" In this Dashboard term Full-Time Developers are developers who have 10+ days of contributions (Commit code in Guithub) in a month, Part-Time Developer are those who have 2 to 9 days of contributions and finaly One-Time Developers are contribute only once. """)
+st.write(""" NEAR’s 2022 was one of huge growth and innovation. New partnerships like Sweatcoin and SailGP were major stepping stones toward bringing Web3 to the masses. Projects in areas such as gaming, music, and NFTs showcased that the NEAR ecosystem is thriving and poised for new heights in 2023. """)
 
 st.image(Image.open('Images/2022 VS 2021/2.png'))
 
+st.text(" \n")
+st.text(" \n")
+st.text(" \n")
 
-st.write(""" ### Near  """)
-st.image(Image.open('Images/2022 VS 2021/3.png'))
+
+st.write(""" ## Near Two Years Scatter Graphs   """)
+
+st.write(""" You can see 2020-2021 Near full-time developers scatter graph, NEAR was among ecosystems with more than 100 full-time developers and gained 4x developers compare to 2020 figure. """)
+
+st.image(Image.open('Images/2022 VS 2021/2021_2.jpg'))
+
+st.text(" \n")
+
+st.write(""" In 2022 full time developers grow 22% but compare to 4x raise in 2021 it is not that significant. """)
 st.image(Image.open('Images/2022 VS 2021/4.png'))
 
-st.write(""" ### Near  """)
+st.text(" \n")
+st.text(" \n")
+st.text(" \n")
+
+st.write(""" ### Near Is One of The Fastest Growing Ecosystems  """)
+st.write(""" Near ranked 4th with 307% on total monthly developers in 2021 but this trend is become slower in 2022 with only 33% growth . """)
+st.text(" \n")
+
 st.image(Image.open('Images/2022 VS 2021/1.png'))
+st.text(" \n")
+st.image(Image.open('Images/EC Report 2022/9.Full_Time_Dev_Zoom_in.jpg'))
