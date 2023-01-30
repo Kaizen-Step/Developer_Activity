@@ -60,8 +60,13 @@ The taxonomy of projects is available at our Github:
 
 
 ## Methodology
-
-In this Dashboard we dive in Electric Capital developers report(2022 & 2021) for NEAR Ecosystem Data, we use plots and charts of this report to focus on NEAR 2022 developer comunity activity and comoare it with other peers like Terra and Cosmos finnaly we use on chain data from Flipside Crypto to add Results to Electric Capital Report and make comparison over the results as possible.
+With Electric Capital’s release of its annual report on developer activity, the topic of “developers” is a hot topic across crypto.  
+Produce a rich analysis of NEAR developer activity, using metrics and definitions of your choice to answer the questions:  
+* How many developers are active on NEAR?
+* How active are they?
+* How this has changed over time?
+Feel free to reference (and cite) the Electric Capital report to provide background  
+To answer these questions we try to dive in Electric Capital developers report(2022 & 2021) for NEAR Ecosystem Data, we use plots and charts of this report to focus on NEAR 2022 developer comunity activity and compare it with other peers like Terra and Cosmos finnaly we use on chain data from Flipside Crypto Data Base table " near.beta.github_activity " to add Results to Electric Capital Report and make comparison over the results as possible.
 
 
 
